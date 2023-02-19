@@ -1,9 +1,190 @@
-.app{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: blanchedalmond;
-    height: 100vh;
+
+
+
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+
+:root {
+    --black: #260101;
+    --brown1: #BFAE99;
+    --brown2:#A68256;
+    --brown3:#735439;
+    --brown4: #402318;
+    --font-size: 1.3rem;
+    --font1: 'Playfair Display', serif;
+    --font2: 'Source Sans Pro', sans-serif; 
 }
 
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+/* generic styles for the page */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font1);
+    background-color: var(--black);
+    color: var(--brown1);
+    font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+a {
+    color: var(--brown2);
+}
+
+a:hover {
+    color: var(--brown3);
+    text-decoration: none;
+}
+
+
+/* intro styles */
+
+#intro {
+    padding-bottom: 10rem;
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--font1);
+    font-size: 1rem;
+}
+
+.name span {
+    font-family: var(--font1);
+    font-size: 4rem;
+    color: var(--brown2);
+    display: block;
+    font-weight: 300;
+}
+
+#intro h2 {
+    font-size: 4rem;
+}
+
+
+/* contact section */
+
+#contact {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+#contact p:last-child {
+    margin-top: 3rem;
+}
+
+
+/* navigation */
+
+nav {
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 1rem;
+}
+
+nav h1 a {
+    font-family: var(--sans);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--brown1);
+}
+
+nav h1 [class*="fa-"] {
+    font-size: 100%;
+    color: var(--brown1);
+}
+
+nav a {
+    color: var(--brown1);
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+    color: var(--brown2);
+}
+
+.button {
+    background-color: var(--brown2);
+    color: var(--black);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.button:hover {
+    color: var(--brown1);
+    background-color: var(--brown4);
+}
+
+
+/* footer section */
+
+footer {
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
+}
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
