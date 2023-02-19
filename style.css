@@ -4,14 +4,19 @@
 /* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
 
 :root {
-    --black: #260101;
-    --brown1: #BFAE99;
-    --brown2:#A68256;
-    --brown3:#735439;
-    --brown4: #402318;
+    --black: #06080D;
+    --blue: #071540;
+    --brown:#733816;
+    --brown2:#8C322A;
+    --pink: #A65B8C;
     --font-size: 1.3rem;
     --font1: 'Playfair Display', serif;
     --font2: 'Source Sans Pro', sans-serif; 
+}
+
+.gradient{
+    background: linear-gradient(90deg, rgba(7,21,64,1) 0%, rgba(115,56,22,1) 15%, rgba(166,91,140,1) 85%, rgba(7,21,64,1) 100%);
+    height: 2px;
 }
 
 
@@ -35,7 +40,7 @@ body {
     margin: 0;
     font-family: var(--font1);
     background-color: var(--black);
-    color: var(--brown1);
+    color: var(--brown2);
     font-size: var(--font-size);
 }
 
@@ -46,11 +51,11 @@ h3 {
 }
 
 a {
-    color: var(--brown2);
+    color: var(--pink);
 }
 
 a:hover {
-    color: var(--brown3);
+    color: var(--blue);
     text-decoration: none;
 }
 
@@ -58,7 +63,10 @@ a:hover {
 /* intro styles */
 
 #intro {
-    padding-bottom: 10rem;
+    padding: 4rem 1rem 10rem 1rem;
+    
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #intro p {
@@ -74,7 +82,7 @@ a:hover {
 .name span {
     font-family: var(--font1);
     font-size: 4rem;
-    color: var(--brown2);
+    color: var(--pink);
     display: block;
     font-weight: 300;
 }
@@ -82,7 +90,9 @@ a:hover {
 #intro h2 {
     font-size: 4rem;
 }
-
+.section-blue{
+    background-color: var(--blue);
+}
 
 /* contact section */
 
@@ -91,23 +101,26 @@ a:hover {
     text-align: center;
     margin: 0 auto;
     padding: 3rem 0;
+    color: var(--pink);
 }
 
 #contact p:last-child {
     margin-top: 3rem;
+
 }
 
 
 /* navigation */
 
 nav {
-    font-family: var(--mono);
+    font-family: var(--font1);
     font-size: 80%;
     padding: 1rem;
+    
 }
 
 nav h1 a {
-    font-family: var(--sans);
+    font-family: var(--font2);
 }
 
 nav ul {
@@ -128,35 +141,36 @@ nav li:first-child {
 
 nav [class*="fa-"] {
     font-size: 150%;
-    color: var(--brown1);
+    color: var(--pink);
 }
 
 nav h1 [class*="fa-"] {
     font-size: 100%;
-    color: var(--brown1);
+    color: var(--blue);
 }
 
 nav a {
-    color: var(--brown1);
+    color: var(--pink);
     text-decoration: none;
     display: block;
 }
 
 nav a:hover,
 nav [class*="fa-"]:hover {
-    color: var(--brown2);
+    color: var(--blue);
 }
 
 .button {
-    background-color: var(--brown2);
-    color: var(--black);
+    background-color: var(--brown);
+    color: var(--blue);
     padding: 0.5rem;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .button:hover {
-    color: var(--brown1);
-    background-color: var(--brown4);
+    color: var(--pink);
+    background-color: var(--brown2);
 }
 
 
@@ -164,6 +178,7 @@ nav [class*="fa-"]:hover {
 
 footer {
     text-align: center;
+    padding: 3rem 0;
 }
 
 footer ul {
@@ -174,7 +189,7 @@ footer ul {
     flex-flow: row wrap;
     justify-content: center;
     gap: 3rem;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 @media (min-width: 850px) {
