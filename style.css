@@ -1,7 +1,6 @@
 
 
 
-/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
 
 :root {
     --black: #06080D;
@@ -20,7 +19,6 @@
 }
 
 
-/* border box model: https://css-tricks.com/box-sizing/ */
 
 html {
     box-sizing: border-box;
