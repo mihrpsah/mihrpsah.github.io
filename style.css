@@ -4,10 +4,10 @@
 
 :root {
     --black: #06080D;
-    --blue: #071540;
-    --brown:#733816;
-    --brown2:#8C322A;
-    --pink: #b0468b;
+    --blue: #fefeff;
+    --brown:#5f0e00;
+    --brown2:#ff9a8c;
+    --pink: #ff64d1;
     --font-size: 1.3rem;
     --font1: 'Playfair Display', serif;
     --font2: 'Source Sans Pro', sans-serif; 
