@@ -3,11 +3,11 @@
 
 
 :root {
-    --black: #06080D;
-    --blue: #000018;
-    --brown:#5f0e00;
-    --brown2:#ff9a8c;
-    --pink: #ff64d1;
+    --c1: #F2F2F2;
+    --c2: #BFBFBF;
+    --c3: #737373;
+    --c4:#404040;
+    --c5: #0D0D0D;
     --font-size: 1.3rem;
     --font1: 'Playfair Display', serif;
     --font2: 'Source Sans Pro', sans-serif; 
@@ -37,8 +37,8 @@ body {
     padding: 0;
     margin: 0;
     font-family: var(--font1);
-    background-color: black;
-    color: var(--brown2);
+    background-color: var(--c1);
+    color: var(--c4);
     font-size: var(--font-size);
 }
 
@@ -49,12 +49,16 @@ h3 {
 }
 
 a {
-    color: var(--pink);
+    color: var(--c5);
 }
 
 a:hover {
     color: var(--blue);
     text-decoration: none;
+}
+
+.section-black{
+    background-color: var(--c5);
 }
 
 
@@ -80,7 +84,7 @@ a:hover {
 .name span {
     font-family: var(--font1);
     font-size: 4rem;
-    color: var(--pink);
+    color: var(--c5);
     display: block;
     font-weight: 300;
 }
@@ -89,7 +93,7 @@ a:hover {
     font-size: 4rem;
 }
 .section-blue{
-    background-color: var(--blue);
+    background-color: var(--c3);
 }
 
 /* contact section */
@@ -99,7 +103,7 @@ a:hover {
     text-align: center;
     margin: 0 auto;
     padding: 3rem 0;
-    color: var(--pink);
+    color: var(--c1);
 }
 
 #contact p:last-child {
@@ -114,7 +118,7 @@ nav {
     font-family: var(--font1);
     font-size: 80%;
     padding: 1rem;
-    
+   
 }
 
 nav h1 a {
@@ -139,36 +143,36 @@ nav li:first-child {
 
 nav [class*="fa-"] {
     font-size: 150%;
-    color: var(--pink);
+    color: var(--c1);
 }
 
 nav h1 [class*="fa-"] {
     font-size: 100%;
-    color: white;
+    color: var(--c1);
 }
 
 nav a {
-    color: var(--pink);
+    color: var(--c1);
     text-decoration: none;
     display: block;
 }
 
 nav a:hover,
 nav [class*="fa-"]:hover {
-    color: var(--blue);
+    color: var(--c3);
 }
 
 .button {
-    background-color: var(--brown);
-    color: var(--blue);
+    background-color: var(--c4);
+    color: var(--c1);
     padding: 0.5rem;
     border-radius: 5px;
     text-decoration: none;
 }
 
 .button:hover {
-    color: var(--pink);
-    background-color: var(--brown2);
+    color: var(--c5);
+    background-color: var(--c2);
 }
 
 
