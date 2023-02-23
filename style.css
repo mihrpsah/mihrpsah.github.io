@@ -233,7 +233,8 @@ line-height: 1.5;
     border-left: 1px solid var(--c5);
     border-top: 1px solid var(--c5);
     border-radius: 25px;
-    max-width: 350px;
+    /* max-width: 350px; */
+    width: 100%;
     
 }
 
@@ -264,7 +265,7 @@ line-height: 1.5;
     #projects img{
         grid-column: 1/6;
         grid-row: 1/2;
-        max-width: 30vw;
+        /* max-width: 30vw; */
     }
     .text{
         grid-column: 5/11;
