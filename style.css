@@ -44,6 +44,7 @@ body {
     background-color: var(--c1);
     color: var(--c4);
     font-size: var(--font-size);
+  
 }
 
 h1,
@@ -208,4 +209,45 @@ footer ul {
         text-align: left;
         margin-right: auto;
     }
+}
+
+#projects{
+    
+    padding: 3rem 1rem;
+    
+    
+}
+
+#projects p{
+
+border: 2px solid var(--c5);
+border-radius: 12px;
+padding: 1rem;
+background-color: var(--c2);
+color: var(--c5);
+line-height: 1.5;
+}
+#projects img {
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+    border-left: 1px solid var(--c5);
+    border-top: 1px solid var(--c5);
+    border-radius: 25px;
+    max-width: 350px;
+    
+}
+
+#projects h2{
+    margin-top: 1rem;
+    color: var(--c4);
+}
+#projects ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    -ms-flex-align: center;
+    justify-content: flex-start;
+}
+#projects ul li{
+    margin: 0 0.5rem 0 0.5rem;
 }
