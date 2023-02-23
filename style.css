@@ -251,3 +251,28 @@ line-height: 1.5;
 #projects ul li{
     margin: 0 0.5rem 0 0.5rem;
 }
+
+@media (min-width: 800px){
+    article{
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+    }
+    #projects{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    #projects img{
+        grid-column: 1/6;
+        grid-row: 1/2;
+        max-width: 30vw;
+    }
+    .text{
+        grid-column: 5/11;
+        grid-row: 1/2;
+        order: 2;
+        text-align: right;
+    }
+    #projects ul{
+        justify-content: flex-end;
+    }
+}
