@@ -258,6 +258,7 @@ line-height: 1.5;
         display: grid;
         grid-template-columns: repeat(10, 1fr);
     }
+    
     #projects{
         max-width: 1200px;
         margin: 0 auto;
