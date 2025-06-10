@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readings | Mihir Pratap Sah</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/readings.css">
+</head>
+<body>
+    <a href="../" class="back-link">← Back to Home</a>
+    
+    <div class="header">
+        <h1>Readings & Watchings</h1>
+        <div class="breadcrumb">
+            <a href="../">Home</a> / Readings
+        </div>
+    </div>
+
+    <div class="readings-list" id="readingsList">
+        <div class="empty-state">
+            <p>No recommendations yet. Check back soon!</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Mihir Pratap Sah</p>
+    </div>
+
+    <script>
+        // This will be populated when readings are added
+                const readings = [
+            {
+                title: "The Art of Code",
+                author: "Dylan Beattie",
+                description: "Brilliant talk about the intersection of programming and creativity. Shows how code can be beautiful and artistic.",
+                type: "talk",
+                date: "June 10, 2025",
+                rating: 5,
+                cover: null,
+                link: null,
+                youtubeId: "6avJHaC3C2U"
+            }
+        ];
+        
+        function renderReadings() {
+            const readingsList = document.getElementById('readingsList');
+            
+            if (readings.length === 0) {
+                readingsList.innerHTML = '<div class="empty-state"><p>No recommendations yet. Check back soon!</p></div>';
+                return;
+            }
+            
+            readingsList.innerHTML = readings.map(reading => `
+                <div class="reading-item">
+                    <div class="reading-cover">
+                        ${reading.cover ? 
+                            `<img src="${reading.cover}" alt="${reading.title} cover">` : 
+                            'No Cover'
+                        }
+                    </div>
+                    <div class="reading-info">
+                        <h2 class="reading-title">${reading.title}</h2>
+                        <div class="reading-author">${reading.author}</div>
+                        <div class="reading-type">${reading.type}</div>
+                        <div class="reading-date">Recommended on ${reading.date}</div>
+                        <div class="reading-description">${reading.description}</div>
+                        ${reading.rating ? `<div class="reading-rating">${'★'.repeat(reading.rating)}${'☆'.repeat(5-reading.rating)}</div>` : ''}
+                        ${(reading.link || reading.youtubeId) ? `
+                            <div class="reading-links">
+                                ${reading.link ? `<a href="${reading.link}" target="_blank" class="reading-link">Visit Link</a>` : ''}
+                                ${reading.youtubeId ? `<a href="https://youtube.com/watch?v=${reading.youtubeId}" target="_blank" class="reading-link youtube-link">Watch on YouTube</a>` : ''}
+                            </div>
+                        ` : ''}
+                        ${reading.youtubeId ? `
+                            <div class="youtube-embed">
+                                <iframe src="https://www.youtube.com/embed/${reading.youtubeId}" 
+                                        title="${reading.title}" 
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        renderReadings();
+    </script>
+</body>
+</html>
+ 

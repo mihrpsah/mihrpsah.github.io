@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Mihir Pratap Sah</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+</head>
+<body>
+    <a href="../" class="back-link">← Back to Home</a>
+    
+    <div class="header">
+        <h1>Blog</h1>
+        <div class="breadcrumb">
+            <a href="../">Home</a> / Blog
+        </div>
+    </div>
+
+    <div class="post-list" id="postList">
+        <div class="empty-state">
+            <p>No blog posts yet. Check back soon!</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Mihir Pratap Sah</p>
+    </div>
+
+    <script>
+        // This will be populated when posts are added
+                const posts = [
+            {
+                title: "Welcome to My Website",
+                filename: "welcome-to-my-website.html",
+                date: "June 10, 2025",
+                excerpt: "This is my first blog post on my new minimalistic website. I'm excited to share thoughts about **data engineering**, technology, and more."
+            }
+        ];
+        
+        function renderPosts() {
+            const postList = document.getElementById('postList');
+            
+            if (posts.length === 0) {
+                postList.innerHTML = '<div class="empty-state"><p>No blog posts yet. Check back soon!</p></div>';
+                return;
+            }
+            
+            postList.innerHTML = posts.map(post => `
+                <div class="post-item">
+                    <h2 class="post-title">
+                        <a href="${post.filename}">${post.title}</a>
+                    </h2>
+                    <div class="post-date">${post.date}</div>
+                    <div class="post-excerpt">${post.excerpt || ''}</div>
+                </div>
+            `).join('');
+        }
+        
+        renderPosts();
+    </script>
+</body>
+</html> 

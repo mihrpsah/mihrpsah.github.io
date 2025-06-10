@@ -1,0 +1,276 @@
+/* Readings Specific Styles */
+
+/* Header Styles */
+.header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    font-weight: normal;
+    color: #2c3e50;
+}
+
+/* Reading List */
+.readings-list {
+    margin-top: 30px;
+}
+
+.reading-item {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 20px;
+}
+
+.reading-item:last-child {
+    border-bottom: none;
+}
+
+.reading-cover {
+    flex-shrink: 0;
+    width: 80px;
+    height: 120px;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.reading-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.reading-info {
+    flex: 1;
+}
+
+.reading-title {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.reading-type {
+    font-size: 0.85em;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.reading-date {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.reading-item:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.book-cover {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+}
+
+.book-info h3 {
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.book-author {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.book-rating {
+    margin-bottom: 12px;
+}
+
+.stars {
+    color: #f39c12;
+    font-size: 1.1em;
+    margin-right: 8px;
+}
+
+.rating-text {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.book-review {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.reading-description {
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.reading-rating {
+    margin-top: 10px;
+    color: #f39c12;
+}
+
+.book-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.reading-links {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.book-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.reading-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.book-link:hover,
+.reading-link:hover {
+    background-color: #2980b9;
+}
+
+.book-link.youtube {
+    background-color: #ff6b6b;
+}
+
+.book-link.youtube:hover {
+    background-color: #ee5a52;
+}
+
+.youtube-link {
+    background-color: #ff0000;
+}
+
+.youtube-link:hover {
+    background-color: #cc0000;
+}
+
+.youtube-embed {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.youtube-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin: 60px 0;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 2px dashed #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reading-item {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .book-cover {
+        height: 130px;
+    }
+    
+    .book-info h3 {
+        font-size: 1.2em;
+    }
+    
+    .book-links {
+        flex-direction: column;
+    }
+    
+    .book-link {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .reading-item {
+        flex-direction: column;
+    }
+    
+    .reading-cover {
+        width: 60px;
+        height: 90px;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .reading-item {
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .reading-cover {
+        width: 120px;
+        height: 150px;
+        margin: 0 auto;
+    }
+} 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art | Mihir Pratap Sah</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/art.css">
+</head>
+<body>
+    <a href="../" class="back-link">← Back to Home</a>
+    
+    <div class="header">
+        <h1>Art</h1>
+        <div class="breadcrumb">
+            <a href="../">Home</a> / Art
+        </div>
+    </div>
+
+    <div class="art-grid" id="artGrid">
+        <div class="empty-state">
+            <p>No art pieces yet. Check back soon!</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Mihir Pratap Sah</p>
+    </div>
+
+    <script>
+        // This will be populated when art pieces are added
+                const artPieces = [
+            
+            {
+                title: "The Accolade",
+                image: "../assets/art/the-accolade.png",
+                description: "The painting depicts a medieval scene where a queen is in the act of knighting a kneeling warrior. The knight, dressed in chain mail with his helmet beside him, kneels in submission and fealty as the regal lady gently taps the flat side of her sword on his shoulder, symbolizing his formal investiture as a knight.",
+                date: "June 10, 2025",
+                medium: "Oil on Canvas",
+                artist: "Edmund Blair Leighton",
+                pageUrl: "the-accolade.html"
+            }
+        ];
+        
+        function renderArt() {
+            const artGrid = document.getElementById('artGrid');
+            
+            if (artPieces.length === 0) {
+                artGrid.innerHTML = '<div class="empty-state"><p>No art pieces yet. Check back soon!</p></div>';
+                return;
+            }
+            
+            artGrid.innerHTML = artPieces.map(art => `
+                <a href="${art.pageUrl}" class="art-item">
+                    <img src="${art.image}" alt="${art.title}" class="art-image">
+                    <div class="art-info">
+                        <h2 class="art-title">${art.title}</h2>
+                        ${art.artist ? `<div class="art-artist">by ${art.artist}</div>` : ''}
+                        <div class="art-date">${art.date}</div>
+                        <div class="art-description">${art.description}</div>
+                        ${art.medium ? `<div class="art-medium">${art.medium}</div>` : ''}
+                    </div>
+                </a>
+            `).join('');
+        }
+        
+        renderArt();
+    </script>
+</body>
+</html> 
